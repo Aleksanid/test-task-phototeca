@@ -1,0 +1,19 @@
+app:
+  percentToNotify: 20 #(N)
+  refreshIntervalInMilliseconds: 30000 #(S)
+  maxUsersSupported: 1 #(K)
+
+telegram:
+  token: ${BOT_TOKEN}
+
+spring:
+  jpa:
+    hibernate:
+      ddl-update: none
+  database: postgresql
+  database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
