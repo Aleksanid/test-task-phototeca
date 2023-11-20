@@ -68,7 +68,7 @@ public class AlgorithmProvider {
             return;
         }
 
-        if (currentUsers >= appConfiguration.getMaxUsersToSupport()) {
+        if (currentUsers >= appConfiguration.getMaxUsersSupported()) {
             telegramBotService.sendMessage(it.message().chat().id(), "Max user count is reached. Request rejected.");
             return;
         }

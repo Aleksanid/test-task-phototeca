@@ -7,19 +7,19 @@ import org.springframework.boot.context.properties.bind.ConstructorBinding;
 @ConfigurationProperties(prefix = "app")
 public class AppConfiguration {
     private final BigDecimal percentToNotify;
-    private final int maxUsersToSupport;
+    private final int maxUsersSupported;
 
     @ConstructorBinding
-    public AppConfiguration(BigDecimal percentToNotify, int maxUsersToSupport) {
+    public AppConfiguration(BigDecimal percentToNotify, int maxUsersSupported) {
         this.percentToNotify = percentToNotify;
-        this.maxUsersToSupport = maxUsersToSupport;
+        this.maxUsersSupported = maxUsersSupported;
     }
 
     public BigDecimal getPercentToNotify() {
         return percentToNotify;
     }
 
-    public int getMaxUsersToSupport() {
-        return maxUsersToSupport;
+    public int getMaxUsersSupported() {
+        return maxUsersSupported;
     }
 }
